@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Riesgo Sísmico - Mateare, Nicaragua</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="seismic-wave"></div>
+            <span class="loader-text">Cargando...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M8 20 L14 20 L17 10 L20 30 L23 15 L26 25 L29 20 L32 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>GESTIÓN DE RIESGO</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#objetivos" class="nav-link">Objetivos</a></li>
+                <li><a href="#amenaza" class="nav-link">Amenaza</a></li>
+                <li><a href="#alertas" class="nav-link">Alertas</a></li>
+                <li><a href="#adaptacion" class="nav-link">Adaptación</a></li>
+                <li><a href="#plan" class="nav-link">Plan de Acción</a></li>
+                <li><a href="#conclusiones" class="nav-link">Conclusiones</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="tectonic-lines"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">📍</span>
+                <span>Municipio de Mateare, Managua</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">SISTEMA DE</span>
+                <span class="title-line highlight">GESTIÓN DE RIESGO</span>
+                <span class="title-line">ANTE AMENAZA SÍSMICA</span>
+            </h1>
+            <p class="hero-subtitle">Documento investigativo para la protección, prevención y resiliencia comunitaria ante eventos sísmicos</p>
+            <div class="hero-info">
+                <div class="info-card">
+                    <span class="info-icon">🎓</span>
+                    <div class="info-text">
+                        <strong>Universidad Nacional Casimiro Sotelo Montenegro</strong>
+                        <span>Facultad de Humanidades y Ciencias Sociales</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📚</span>
+                    <div class="info-text">
+                        <strong>Asignatura: Gestión de Riesgo</strong>
+                        <span>Docente: Ing. Nadia Potosme</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-authors">
+                <div class="author">
+                    <div class="author-avatar">JE</div>
+                    <span>Jaime A. Espino A.</span>
+                </div>
+                <div class="author">
+                    <div class="author-avatar">EC</div>
+                    <span>Elder Castillo Talavera</span>
+                </div>
+            </div>
+            <div class="hero-date">
+                <span class="date-icon">📅</span>
+                <span>Managua, Nicaragua — 30 de Noviembre de 2025</span>
+            </div>
+            <a href="#introduccion" class="scroll-indicator">
+                <span>Explorar</span>
+                <div class="scroll-arrow"></div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="introduccion" class="section section-intro">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Introducción</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="intro-grid">
+                <div class="intro-content">
+                    <p class="intro-lead">Nicaragua se encuentra en el <strong>Cinturón de Fuego del Pacífico</strong>, una de las regiones con mayor actividad tectónica del planeta.</p>
+                    <p>El territorio nicaragüense se sitúa en la zona de interacción de dos importantes placas tectónicas: la <strong>Placa de Cocos</strong> y la <strong>Placa del Caribe</strong>, cuyo proceso de subducción genera una intensa actividad sísmica a lo largo de toda la costa del Pacífico.</p>
+                    <p>El municipio de <strong>Mateare</strong>, con una población aproximada de <strong>58,000 habitantes</strong>, presenta condiciones particulares de vulnerabilidad que requieren atención urgente y planificación integral.</p>
+                </div>
+                <div class="intro-stats">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-number" data-count="300">0</div>
+                        <div class="stat-unit">km</div>
+                        <div class="stat-label">Cadena Volcánica Activa</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number" data-count="58000">0</div>
+                        <div class="stat-unit">hab.</div>
+                        <div class="stat-label">Población de Mateare</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon">📏</div>
+                        <div class="stat-number" data-count="18">0</div>
+                        <div class="stat-unit">km</div>
+                        <div class="stat-label">Distancia a Managua</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-icon">🏔️</div>
+                        <div class="stat-number" data-count="19">0</div>
+                        <div class="stat-unit">volcanes</div>
+                        <div class="stat-label">Volcanes Principales</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Context Section -->
+    <section class="section section-history">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Antecedentes Históricos</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-year="1931">
+                    <div class="timeline-content">
+                        <div class="timeline-date">31 de Marzo de 1931</div>
+                        <h3>Terremoto de Managua</h3>
+                        <div class="timeline-magnitude">Magnitud 5.6 - 6.0</div>
+                        <ul class="timeline-facts">
+                            <li><strong>~2,000</strong> personas fallecidas</li>
+                            <li><strong>85%</strong> de edificaciones destruidas</li>
+                            <li>Incendios masivos durante varios días</li>
+                            <li><strong>20%</strong> del PIB nacional en pérdidas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="1972">
+                    <div class="timeline-content">
+                        <div class="timeline-date">23 de Diciembre de 1972</div>
+                        <h3>Terremoto Devastador</h3>
+                        <div class="timeline-magnitude">Magnitud 6.3</div>
+                        <ul class="timeline-facts">
+                            <li><strong>10,000 - 20,000</strong> personas fallecidas</li>
+                            <li><strong>300,000</strong> personas sin hogar</li>
+                            <li><strong>80%</strong> del centro histórico destruido</li>
+                            <li><strong>40%</strong> del PIB nacional en pérdidas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2014">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Abril de 2014</div>
+                        <h3>Enjambre Sísmico</h3>
+                        <div class="timeline-magnitude">Hasta Magnitud 6.1</div>
+                        <ul class="timeline-facts">
+                            <li><strong>+40</strong> sismos en 48 horas</li>
+                            <li>Daños estructurales significativos</li>
+                            <li>Pánico generalizado en población</li>
+                            <li>Colapso parcial de edificaciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section id="objetivos" class="section section-objectives">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Objetivos del Estudio</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="objectives-container">
+                <div class="objective-main">
+                    <div class="objective-icon">🎯</div>
+                    <h3>Objetivo General</h3>
+                    <p>Identificar y analizar los principales riesgos sísmicos que pueden afectar al municipio de Mateare, evaluando las condiciones de amenaza y vulnerabilidad del territorio, con el fin de proponer lineamientos estratégicos de prevención, mitigación y preparación.</p>
+                </div>
+                <div class="objectives-grid">
+                    <div class="objective-card">
+                        <div class="objective-number">01</div>
+                        <h4>Caracterizar</h4>
+                        <p>El contexto geológico y tectónico, identificando fuentes sismogénicas principales.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">02</div>
+                        <h4>Analizar</h4>
+                        <p>Los antecedentes históricos de actividad sísmica y lecciones aprendidas.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">03</div>
+                        <h4>Evaluar</h4>
+                        <p>Las condiciones de vulnerabilidad física, social y económica del municipio.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">04</div>
+                        <h4>Establecer</h4>
+                        <p>Escenarios de riesgo sísmico considerando diferentes magnitudes.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">05</div>
+                        <h4>Proponer</h4>
+                        <p>Medidas integrales de prevención, mitigación y preparación.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">06</div>
+                        <h4>Desarrollar</h4>
+                        <p>Lineamientos para un Plan de Contingencia Municipal ante Sismos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Threat Analysis Section -->
+    <section id="amenaza" class="section section-threat">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Análisis de Amenaza Sísmica</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="threat-sources">
+                <h3 class="subsection-title">Fuentes Sismogénicas Principales</h3>
+                <div class="sources-grid">
+                    <div class="source-card">
+                        <div class="source-header">
+                            <div class="source-icon">🌊</div>
+                            <h4>Zona de Subducción</h4>
+                        </div>
+                        <div class="source-body">
+                            <p>Interacción de placas Cocos y Caribe</p>
+                            <div class="source-detail">
+                                <span class="detail-label">Distancia:</span>
+                                <span class="detail-value">120-150 km</span>
+                            </div>
+                            <div class="source-detail">
+                                <span class="detail-label">Magnitud potencial:</span>
+                                <span class="detail-value highlight-danger">7.0 - 8.5 Mw</span>
+                            </div>
+                            <div class="source-detail">
+                                <span class="detail-label">Período recurrencia:</span>
+                                <span class="detail-value">50-100 años</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-card featured">
+                        <div class="source-header">
+                            <div class="source-icon">⚠️</div>
+                            <h4>Fallas del Graben</h4>
+                            <span class="featured-badge">Mayor Relevancia</span>
+                        </div>
+                        <div class="source-body">
+                            <p>Sistema de fallas locales que atraviesa Mateare</p>
+                            <div class="source-detail">
+                                <span class="detail-label">Distancia:</span>
+                                <span class="detail-value">0-20 km</span>
+                            </div>
+                            <div class="source-detail">
+                                <span class="detail-label">Magnitud potencial:</span>
+                                <span class="detail-value highlight-danger">6.0 - 6.5 Mw</span>
+                            </div>
+                            <div class="source-detail">
+                                <span class="detail-label">Aceleración:</span>
+                                <span class="detail-value">&gt; 0.5g</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-card">
+                        <div class="source-header">
+                            <div class="source-icon">🌋</div>
+                            <h4>Cadena Volcánica</h4>
+                        </div>
+                        <div class="source-body">
+                            <p>Complejo Volcánico Momotombo-Momotombito</p>
+                            <div class="source-detail">
+                                <span class="detail-label">Distancia:</span>
+                                <span class="detail-value">~30 km</span>
+                            </div>
+                            <div class="source-detail">
+                                <span class="detail-label">Magnitud típica:</span>
+                                <span class="detail-value">M &lt; 5.0</span>
+                            </div>
+                            <div class="source-detail">
+                                <span class="detail-label">Tipo:</span>
+                                <span class="detail-value">Volcano-tectónicos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pga-table">
+                <h3 class="subsection-title">Parámetros de Movimiento del Terreno</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Período de Retorno</th>
+                                <th>PGA Esperado (g)</th>
+                                <th>Probabilidad Anual</th>
+                                <th>Nivel de Riesgo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>50 años</td>
+                                <td>0.25 - 0.30</td>
+                                <td>2%</td>
+                                <td><span class="risk-badge moderate">Moderado</span></td>
+                            </tr>
+                            <tr>
+                                <td>475 años</td>
+                                <td>0.40 - 0.50</td>
+                                <td>10% en 50 años</td>
+                                <td><span class="risk-badge high">Alto</span></td>
+                            </tr>
+                            <tr>
+                                <td>2,475 años</td>
+                                <td>0.60 - 0.70</td>
+                                <td>2% en 50 años</td>
+                                <td><span class="risk-badge extreme">Extremo</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">Mateare se encuentra en una <strong>zona de amenaza sísmica alta</strong>. Para diseño sismorresistente se recomienda usar el sismo de diseño con 10% de probabilidad de excedencia en 50 años.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert System Section -->
+    <section id="alertas" class="section section-alerts">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Sistema de Alertas Tempranas</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="alerts-intro">
+                <p>El Sistema de Alerta Temprana Sísmica (SATS) para Mateare constituye un mecanismo integrado de vigilancia, comunicación, preparación y respuesta ante la amenaza de terremotos.</p>
+            </div>
+            <div class="alert-levels">
+                <h3 class="subsection-title light">Niveles de Alerta</h3>
+                <div class="levels-grid">
+                    <div class="level-card level-green">
+                        <div class="level-header">
+                            <span class="level-color"></span>
+                            <h4>VERDE</h4>
+                            <span class="level-type">Informativa</span>
+                        </div>
+                        <div class="level-body">
+                            <div class="level-magnitude">&lt; 4.0 Richter</div>
+                            <ul>
+                                <li>Percibido levemente por población</li>
+                                <li>No se esperan daños</li>
+                                <li>Función: Informar y mantener vigilancia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="level-card level-yellow">
+                        <div class="level-header">
+                            <span class="level-color"></span>
+                            <h4>AMARILLA</h4>
+                            <span class="level-type">Preventiva</span>
+                        </div>
+                        <div class="level-body">
+                            <div class="level-magnitude">4.0 - 5.5 Richter</div>
+                            <ul>
+                                <li>Percibido por mayoría de población</li>
+                                <li>Posibles daños menores</li>
+                                <li>Activar protocolos de verificación</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="level-card level-orange">
+                        <div class="level-header">
+                            <span class="level-color"></span>
+                            <h4>NARANJA</h4>
+                            <span class="level-type">Preparación</span>
+                        </div>
+                        <div class="level-body">
+                            <div class="level-magnitude">5.5 - 6.5 Richter</div>
+                            <ul>
+                                <li>Daños moderados a graves</li>
+                                <li>Posibles víctimas y colapsos</li>
+                                <li>Activar Comités de Emergencia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="level-card level-red">
+                        <div class="level-header">
+                            <span class="level-color"></span>
+                            <h4>ROJA</h4>
+                            <span class="level-type">Emergencia Máxima</span>
+                        </div>
+                        <div class="level-body">
+                            <div class="level-magnitude">&gt; 6.5 Richter</div>
+                            <ul>
+                                <li>Daños severos y generalizados</li>
+                                <li>Múltiples víctimas</li>
+                                <li>Activación total del plan de emergencia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="components-section">
+                <h3 class="subsection-title light">Componentes del Sistema</h3>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-icon">📡</div>
+                        <h4>Conocimiento del Riesgo</h4>
+                        <p>Caracterización sismotectónica, análisis de vulnerabilidad y desarrollo de escenarios de riesgo.</p>
+                    </div>
+                    <div class="component-card">
+                        <div class="component-icon">🔬</div>
+                        <h4>Seguimiento y Alerta</h4>
+                        <p>Red de monitoreo sismológico operada por INETER con estaciones estratégicamente ubicadas.</p>
+                    </div>
+                    <div class="component-card">
+                        <div class="component-icon">📢</div>
+                        <h4>Difusión y Comunicación</h4>
+                        <p>Sistema de sirenas, radio, televisión, redes sociales y sistemas de mensajería masiva.</p>
+                    </div>
+                    <div class="component-card">
+                        <div class="component-icon">🚨</div>
+                        <h4>Capacidad de Respuesta</h4>
+                        <p>Preparación institucional, comunitaria y familiar para ejecutar acciones según nivel de alerta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Phases Section -->
+    <section class="section section-phases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Fases de Respuesta</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="phases-carousel">
+                <div class="phase-card active" data-phase="1">
+                    <div class="phase-number">FASE 1</div>
+                    <h4>Fortalecimiento de Capacidades</h4>
+                    <p>Coordinación interinstitucional, capacitación, simulacros y actualización de planes.</p>
+                    <ul>
+                        <li>Reuniones periódicas del Comité Municipal</li>
+                        <li>Formación de brigadistas comunitarios</li>
+                        <li>Ejercicios y simulacros regulares</li>
+                    </ul>
+                </div>
+                <div class="phase-card" data-phase="2">
+                    <div class="phase-number">FASE 2</div>
+                    <h4>Preparativos de Emergencia</h4>
+                    <p>Verificación de sistemas, preparación de infraestructura y movilización de recursos.</p>
+                    <ul>
+                        <li>Pre-apertura de albergues</li>
+                        <li>Verificación de comunicaciones</li>
+                        <li>Información a la población</li>
+                    </ul>
+                </div>
+                <div class="phase-card" data-phase="3">
+                    <div class="phase-number">FASE 3</div>
+                    <h4>Respuesta ante Evento</h4>
+                    <p>Activación del sistema de alerta, evacuación, búsqueda y rescate, atención médica.</p>
+                    <ul>
+                        <li>Activación de estructuras de respuesta</li>
+                        <li>Evacuación y protección de población</li>
+                        <li>Coordinación y comunicación</li>
+                    </ul>
+                </div>
+                <div class="phase-card" data-phase="4">
+                    <div class="phase-number">FASE 4</div>
+                    <h4>Búsqueda y Rescate</h4>
+                    <p>Operaciones especializadas de rescate urbano y atención pre-hospitalaria masiva.</p>
+                    <ul>
+                        <li>Técnicas especializadas de rescate</li>
+                        <li>Manejo de espacios confinados</li>
+                        <li>Apoyo psicosocial</li>
+                    </ul>
+                </div>
+                <div class="phase-card" data-phase="5">
+                    <div class="phase-number">FASE 5</div>
+                    <h4>Rehabilitación y Reconstrucción</h4>
+                    <p>Restablecimiento de servicios, reparación de infraestructura y recuperación económica.</p>
+                    <ul>
+                        <li>Rehabilitación de servicios básicos</li>
+                        <li>Retorno de población</li>
+                        <li>Reconstrucción con reducción de riesgo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="phases-nav">
+                <button class="phase-btn" data-target="1">1</button>
+                <button class="phase-btn" data-target="2">2</button>
+                <button class="phase-btn" data-target="3">3</button>
+                <button class="phase-btn" data-target="4">4</button>
+                <button class="phase-btn" data-target="5">5</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Climate Adaptation Section -->
+    <section id="adaptacion" class="section section-climate">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Adaptación al Cambio Climático</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="climate-intro">
+                <div class="climate-stat">
+                    <span class="stat-highlight">3°</span>
+                    <span class="stat-context">Nicaragua en el Índice de Riesgo Climático Global (2000-2019)</span>
+                </div>
+                <p>Existe una importante interrelación entre cambio climático y amenaza sísmica que incrementa la vulnerabilidad y el riesgo en Mateare.</p>
+            </div>
+            <div class="measures-grid">
+                <div class="measure-category">
+                    <h3>
+                        <span class="category-icon">🏗️</span>
+                        Medidas Estructurales
+                    </h3>
+                    <div class="measures-list">
+                        <div class="measure-item">
+                            <h4>Infraestructura Hídrica</h4>
+                            <p>Sistemas de cosecha de agua, mejoramiento de drenaje pluvial, protección de fuentes.</p>
+                        </div>
+                        <div class="measure-item">
+                            <h4>Edificaciones Resilientes</h4>
+                            <p>Reforzamiento sísmico, diseño bioclimático, escuelas y hospitales seguros.</p>
+                        </div>
+                        <div class="measure-item">
+                            <h4>Infraestructura Verde</h4>
+                            <p>Áreas verdes urbanas, corredores biológicos, reforestación de zonas de recarga.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="measure-category">
+                    <h3>
+                        <span class="category-icon">📋</span>
+                        Medidas No Estructurales
+                    </h3>
+                    <div class="measures-list">
+                        <div class="measure-item">
+                            <h4>Planificación Territorial</h4>
+                            <p>Ordenamiento con enfoque de riesgo, restricción de construcción en zonas peligrosas.</p>
+                        </div>
+                        <div class="measure-item">
+                            <h4>Marco Normativo</h4>
+                            <p>Aplicación obligatoria del Código Sísmico, normas de construcción bioclimática.</p>
+                        </div>
+                        <div class="measure-item">
+                            <h4>Fortalecimiento de Capacidades</h4>
+                            <p>Capacitación técnica, educación comunitaria, formación de promotores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resilience-section">
+                <h3 class="subsection-title light">Estrategias de Resiliencia Comunitaria</h3>
+                <div class="resilience-cards">
+                    <div class="resilience-card">
+                        <div class="resilience-icon">👥</div>
+                        <h4>Organización Comunitaria</h4>
+                        <p>Fortalecimiento de Comités de Prevención, brigadas multifuncionales con participación de mujeres, jóvenes, adultos mayores.</p>
+                    </div>
+                    <div class="resilience-card">
+                        <div class="resilience-icon">📝</div>
+                        <h4>Planes Comunitarios</h4>
+                        <p>Elaboración participativa de planes de gestión integral del riesgo y planes familiares de emergencia.</p>
+                    </div>
+                    <div class="resilience-card">
+                        <div class="resilience-icon">🧠</div>
+                        <h4>Conocimiento Local</h4>
+                        <p>Recuperación y valoración del conocimiento tradicional sobre amenazas e integración con conocimiento científico.</p>
+                    </div>
+                    <div class="resilience-card">
+                        <div class="resilience-icon">💼</div>
+                        <h4>Medios de Vida</h4>
+                        <p>Diversificación de ingresos, agricultura resiliente, bancos comunitarios de semillas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Plan Section -->
+    <section id="plan" class="section section-action">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">08</span>
+                <h2 class="section-title">Plan de Acción Integrado</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="plan-objective">
+                <h3>Objetivo General del Plan</h3>
+                <p>Fortalecer la resiliencia del municipio de Mateare ante la amenaza sísmica y los efectos del cambio climático, mediante la implementación coordinada de medidas estructurales y no estructurales.</p>
+            </div>
+            <div class="strategic-lines">
+                <h3 class="subsection-title">Líneas Estratégicas</h3>
+                <div class="lines-accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="line-number">L1</span>
+                            <span class="line-title">Conocimiento del Riesgo y Monitoreo</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Actualización de estudios de amenaza y vulnerabilidad</li>
+                                <li>Instalación de estación sismológica local</li>
+                                <li>Desarrollo de Sistema de Información Geográfica</li>
+                                <li>Creación de Observatorio Municipal de Riesgo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="line-number">L2</span>
+                            <span class="line-title">Prevención y Reducción del Riesgo</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Actualización del Plan de Ordenamiento Territorial</li>
+                                <li>Programa de reubicación de familias en zonas de alto riesgo</li>
+                                <li>Reforzamiento sísmico de edificaciones críticas</li>
+                                <li>Construcción de obras de protección</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="line-number">L3</span>
+                            <span class="line-title">Sistema de Alertas y Preparación</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Instalación de sistema de sirenas de alerta</li>
+                                <li>Elaboración de Planes Comunitarios de Gestión del Riesgo</li>
+                                <li>Formación de Brigadas Comunitarias</li>
+                                <li>Realización de simulacros periódicos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span class="line-number">L4</span>
+                            <span class="line-title">Adaptación al Cambio Climático</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Sistemas de cosecha de agua lluvia</li>
+                                <li>Mejoramiento de drenaje pluvial</li>
+                                <li>Reforestación de zonas de recarga hídrica</li>
+                                <li>Promoción de agricultura resiliente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-section">
+                <h3 class="subsection-title">Priorización Temporal</h3>
+                <div class="priority-timeline">
+                    <div class="priority-block short">
+                        <div class="priority-header">
+                            <h4>Corto Plazo</h4>
+                            <span class="priority-years">2025-2026</span>
+                        </div>
+                        <ul>
+                            <li>Sistema de sirenas de alerta</li>
+                            <li>Centro de Operaciones Municipal</li>
+                            <li>10 Planes Comunitarios prioritarios</li>
+                            <li>Reforzamiento de 3 escuelas críticas</li>
+                            <li>Simulacro municipal</li>
+                        </ul>
+                    </div>
+                    <div class="priority-block medium">
+                        <div class="priority-header">
+                            <h4>Mediano Plazo</h4>
+                            <span class="priority-years">2027-2029</span>
+                        </div>
+                        <ul>
+                            <li>Estación sismológica local</li>
+                            <li>Reubicación de 50 familias</li>
+                            <li>10 escuelas adicionales reforzadas</li>
+                            <li>200 viviendas mejoradas</li>
+                            <li>100 ha reforestadas</li>
+                        </ul>
+                    </div>
+                    <div class="priority-block long">
+                        <div class="priority-header">
+                            <h4>Largo Plazo</h4>
+                            <span class="priority-years">2030-2034</span>
+                        </div>
+                        <ul>
+                            <li>Programa continuo de mejoramiento</li>
+                            <li>Viviendas nuevas con diseño resiliente</li>
+                            <li>Agricultura resiliente consolidada</li>
+                            <li>Evaluación de efectividad</li>
+                            <li>Actualización del Plan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusions Section -->
+    <section id="conclusiones" class="section section-conclusions">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-number">09</span>
+                <h2 class="section-title">Conclusiones y Recomendaciones</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="conclusions-grid">
+                <div class="conclusion-card">
+                    <div class="conclusion-number">01</div>
+                    <p>Mateare enfrenta <strong>alto riesgo sísmico</strong> debido a su ubicación en el Cinturón de Fuego del Pacífico y la confluencia de múltiples fuentes sismogénicas.</p>
+                </div>
+                <div class="conclusion-card">
+                    <div class="conclusion-number">02</div>
+                    <p>El <strong>cambio climático</strong> incrementa la frecuencia de eventos extremos, creando escenarios de multiamenaza que aumentan la vulnerabilidad.</p>
+                </div>
+                <div class="conclusion-card">
+                    <div class="conclusion-number">03</div>
+                    <p>La implementación de un <strong>Sistema de Alertas Tempranas</strong> efectivo es fundamental, con énfasis en la preparación previa de la población.</p>
+                </div>
+                <div class="conclusion-card">
+                    <div class="conclusion-number">04</div>
+                    <p>La <strong>reducción de vulnerabilidad estructural</strong> mediante el código sísmico y el reforzamiento de edificaciones es la medida más efectiva.</p>
+                </div>
+                <div class="conclusion-card">
+                    <div class="conclusion-number">05</div>
+                    <p>El <strong>fortalecimiento de capacidades locales</strong> es fundamental para la sostenibilidad de los esfuerzos de gestión del riesgo.</p>
+                </div>
+                <div class="conclusion-card">
+                    <div class="conclusion-number">06</div>
+                    <p>La <strong>inversión en prevención</strong> es rentable: cada dólar invertido ahorra entre 4 y 7 dólares en pérdidas post-desastre.</p>
+                </div>
+            </div>
+            <div class="final-reflection">
+                <div class="reflection-content">
+                    <h3>Reflexión Final</h3>
+                    <blockquote>
+                        "Los desastres no son naturales. Los fenómenos naturales seguirán ocurriendo. Lo que determina si se convierten en desastres es el nivel de vulnerabilidad de las poblaciones expuestas."
+                    </blockquote>
+                    <p>El municipio de Mateare tiene ante sí un desafío significativo pero también una oportunidad. Con conocimiento, organización, recursos y voluntad política, es posible reducir drásticamente la vulnerabilidad y construir un municipio más seguro, resiliente y próspero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 20 L14 20 L17 10 L20 30 L23 15 L26 25 L29 20 L32 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap-round stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="footer-text">
+                        <strong>Sistema de Gestión de Riesgo Sísmico</strong>
+                        <span>Municipio de Mateare, Managua, Nicaragua</span>
+                    </div>
+                </div>
+                <div class="footer-institution">
+                    <p>Universidad Nacional Casimiro Sotelo Montenegro</p>
+                    <p>Facultad de Humanidades y Ciencias Sociales</p>
+                    <p>Asignatura: Gestión de Riesgo</p>
+                </div>
+                <div class="footer-authors">
+                    <p><strong>Autores:</strong></p>
+                    <p>Jaime A. Espino A. & Elder Castillo Talavera</p>
+                    <p><strong>Docente:</strong> Ing. Nadia Potosme</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Noviembre 2025 — Documento Investigativo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
